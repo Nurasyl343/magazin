@@ -28,7 +28,7 @@ Route::group(['middleware' => 'auth:sanctum'], function (){
 
     Route::group(['prefix'=>'/products'], function (){
         Route::get('/', [ProductController::class, 'index']);
-        Route::get('/{id}', [ProductController::class, 'show']);
+        Route::get('/{product}', [ProductController::class, 'show']);
 
         Route::middleware('isadmin')->group(function (){
             Route::post('/', [ProductController::class, 'store']);

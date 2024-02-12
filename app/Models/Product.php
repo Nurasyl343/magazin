@@ -53,8 +53,6 @@ class Product extends Model
         return $product;
     }
 
-
-
     public function category(){
         return $this->belongsTo(Category::class);
     }
@@ -63,7 +61,4 @@ class Product extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function usersBought(){
-        return $this->belongsToMany(User::class, 'cart')->withTimestamps()->withPivot('number', 'status');
-    }
 }

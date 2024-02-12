@@ -25,9 +25,9 @@ class ProductController extends Controller
     }
 
 
-    public function show(Product $id)
+    public function show(Product $product)
     {
-        return response()->json(['status'=> 'Product naiden','request' => $id],);
+        return response()->json(['status'=> 'Product naiden','request' => $product],);
     }
 
 
